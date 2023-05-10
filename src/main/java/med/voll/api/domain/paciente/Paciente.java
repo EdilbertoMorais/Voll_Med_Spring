@@ -52,7 +52,7 @@ public class Paciente {
 
     }
 
-    @Secured("ROLE_ADMIN")
+//    @Secured("ROLE_ADMIN")
     public void excluir() {
         this.ativo = false;
     }

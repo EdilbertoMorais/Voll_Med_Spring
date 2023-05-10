@@ -11,7 +11,7 @@ import med.voll.api.domain.paciente.Paciente;
 import java.time.LocalDateTime;
 
 @Table(name = "consultas")
-@Entity(name = "consulta")
+@Entity(name = "Consulta")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,4 +32,11 @@ public class Consulta {
 
     private LocalDateTime data;
 
+    @Column(name = "motivo_cancelamento")
+    @Enumerated(EnumType.STRING)
+    private MotivoCancelamento motivoCancelamento;
+
+    public void cancelar (MotivoCancelamento motivo) {
+        this.motivoCancelamento = motivo;
+    }
 }
