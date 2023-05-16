@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.domain.endereco.Endereco;
-import org.springframework.security.access.annotation.Secured;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
@@ -52,7 +51,6 @@ public class Paciente {
 
     }
 
-//    @Secured("ROLE_ADMIN")
     public void excluir() {
         this.ativo = false;
     }

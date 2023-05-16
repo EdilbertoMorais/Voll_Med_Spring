@@ -6,7 +6,6 @@ import med.voll.api.domain.endereco.DadosEndereco;
 public record DadosAtualizacaoMedico(
         @NotNull
         Long id,
-        boolean ativo,
         String nome,
         String telefone,
         DadosEndereco endereco) {
